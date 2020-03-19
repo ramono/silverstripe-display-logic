@@ -1,7 +1,7 @@
-<ul id="$ID" class="$extraClass" <% if $DisplayLogic || $DisplayLogicMasters %>name="$Name" data-display-logic-masters="$DisplayLogicMasters" data-display-logic-eval="$DisplayLogic"<% end_if %>>
+<ul id="$ID" class="$extraClass"<% if $Options.Count %> role="listbox"<% end_if %> <% if $DisplayLogic || $DisplayLogicMasters %>name="$Name" data-display-logic-masters="$DisplayLogicMasters" data-display-logic-eval="$DisplayLogic"<% end_if %>>
 	<% if $Options.Count %>
 		<% loop $Options %>
-			<li class="$Class">
+			<li class="$Class" role="$Role">
 				<input id="$ID" class="checkbox" name="$Name" type="checkbox" value="$Value"<% if $isChecked %> checked="checked"<% end_if %><% if $isDisabled %> disabled="disabled"<% end_if %> />
 				<label for="$ID">$Title</label>
 			</li> 
